@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MVCFameDocs.Models.UserModel>
+
+@{
+    ViewBag.Title = "FAME Documents | User Access";
+}
+
+<h2>User Access Permissions</h2>
+
+<p>
+    @Html.ActionLink("Add New User", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserRead)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserWrite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserCreate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserDelete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserChange)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserRead)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserWrite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserCreate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserDelete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserChange)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

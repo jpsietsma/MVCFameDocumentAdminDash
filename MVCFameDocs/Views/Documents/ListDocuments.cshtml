@@ -1,0 +1,95 @@
+﻿@model IEnumerable<MVCFameDocs.Models.FAMEDocumentModel>
+
+@{
+    ViewBag.Title = "FAME | Document Dashboard";
+}
+
+<h1 style="text-align: center;">
+    
+    FAME Document Library - Current Files
+
+</h1>
+
+<h4 style="text-align: center;">
+    The following is a list of all files currently stored on the J:\Farms document structure in FAME.
+</h4>
+<br />
+<br />
+
+<table class="table">
+    <tr style="text-align: center;">
+        <th>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileNameFriendly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileSubType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FarmID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileUploader)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileUploadMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DB)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileNameFriendly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileSubType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FarmID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileUploader)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileUploadMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DB)
+        </td>
+
+    </tr>
+}
+
+</table>

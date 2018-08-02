@@ -1,0 +1,98 @@
+﻿@model MVCFameDocs.Models.FAMEDocumentModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>FAMEDocumentModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileNameFriendly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileNameFriendly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileSubtype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileSubtype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarmID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarmID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileUploader)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileUploader)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileUploadMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileUploadMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileCreated)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
